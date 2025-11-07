@@ -1,4 +1,4 @@
-title: NINA-report format
+title: NINA-report format (English version)
 author: Jens Åström
 version: 0.0.1
 quarto-required: ">=1.2.198"
@@ -8,7 +8,7 @@ contributes:
       date-format: full
     pdf:
       documentclass: article
-      template: pdf_template/template.tex
+      template: pdf_english_template/template.tex
       number-sections: true
     html:
       theme: html_template/ninareport.scss

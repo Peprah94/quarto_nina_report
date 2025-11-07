@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="keywords" content="ett, två">
+
+<title>Enter main title here</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="quarto_ninareport_englishVersion_files/libs/clipboard/clipboard.min.js"></script>
+<script src="quarto_ninareport_englishVersion_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="quarto_ninareport_englishVersion_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="quarto_ninareport_englishVersion_files/libs/quarto-html/popper.min.js"></script>
+<script src="quarto_ninareport_englishVersion_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="quarto_ninareport_englishVersion_files/libs/quarto-html/anchor.min.js"></script>
+<link href="quarto_ninareport_englishVersion_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="quarto_ninareport_englishVersion_files/libs/quarto-html/quarto-syntax-highlighting-1b3e43c72e8be34557c75123b0b69e0d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="quarto_ninareport_englishVersion_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="quarto_ninareport_englishVersion_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="quarto_ninareport_englishVersion_files/libs/bootstrap/bootstrap-e6cf8c351d831c99bb84e4043680a261.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+</head><body class="quarto-light"><button type="button" class="btn btn-primary btn-lg bi bi-arrow-up" id="btn-back-to-top"></button>
+
+
+
+<style>
+
+#btn-back-to-top {
+
+  position: fixed;
+
+  bottom: 20px;
+
+  right: 20px;
+
+  display: none;
+
+}
+
+</style>
+
+
+
+<script id="backtotop" type="application/javascript">
+
+let backToTopButton = document.getElementById("btn-back-to-top");
+
+
+
+window.addEventListener('scroll', () => {
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+            backToTopButton.style.display = "block";
+
+        } else {
+
+            backToTopButton.style.display = "none";
+
+        }
+
+    });
+
+
+
+backToTopButton.addEventListener("click", function () {
+
+  document.body.scrollTop = 0;
+
+  document.documentElement.scrollTop = 0;
+
+});
+
+</script>
+<div id="progress-bar" style="width: 0%; height:2px; background-color: rgb(89 127 235);; position: fixed; top: 0px; z-index: 2000;"></div>
+
+
+
+<script id="progressbar" type="text/javascript">
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+
+    const bar = document.querySelector('#progress-bar');
+
+    const post = document.querySelector('#quarto-content');
+
+    const html = document.documentElement;
+
+    
+
+    const height = post.scrollHeight + post.offsetTop;
+
+    
+
+    window.addEventListener('scroll', () => {
+
+        bar.style.width = (html.scrollTop / (height- html.clientHeight)) * 100 + '%';
+
+    });
+
+});
+
+</script>
+<link href="quarto_ninareport_englishVersion_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="quarto_ninareport_englishVersion_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="quarto_ninareport_englishVersion_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="quarto_ninareport_englishVersion_files/libs/datatables-binding-0.33/datatables.js"></script>
+
+<script src="quarto_ninareport_englishVersion_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="quarto_ninareport_englishVersion_files/libs/dt-core-bootstrap-1.13.6/css/dataTables.bootstrap.min.css" rel="stylesheet">
+
+<link href="quarto_ninareport_englishVersion_files/libs/dt-core-bootstrap-1.13.6/css/dataTables.bootstrap.extra.css" rel="stylesheet">
+
+<script src="quarto_ninareport_englishVersion_files/libs/dt-core-bootstrap-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script src="quarto_ninareport_englishVersion_files/libs/dt-core-bootstrap-1.13.6/js/dataTables.bootstrap.min.js"></script>
+
+<link href="quarto_ninareport_englishVersion_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="quarto_ninareport_englishVersion_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+
+
+
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Innhold</h2>
+   
+  <ul>
+  <li><a href="#sec-inl" id="toc-sec-inl" class="nav-link active" data-scroll-target="#sec-inl"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure"><span class="header-section-number">2</span> Procedure</a>
+  <ul class="collapse">
+  <li><a href="#test-sub-sub-heading" id="toc-test-sub-sub-heading" class="nav-link" data-scroll-target="#test-sub-sub-heading"><span class="header-section-number">2.1</span> Test sub sub heading</a></li>
+  <li><a href="#one-for-sub-sub-heading" id="toc-one-for-sub-sub-heading" class="nav-link" data-scroll-target="#one-for-sub-sub-heading"><span class="header-section-number">2.2</span> One for sub sub heading</a>
+  <ul class="collapse">
+  <li><a href="#en-sub-sub-sub-heding" id="toc-en-sub-sub-sub-heding" class="nav-link" data-scroll-target="#en-sub-sub-sub-heding"><span class="header-section-number">2.2.1</span> En sub sub sub heding</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#equations" id="toc-equations" class="nav-link" data-scroll-target="#equations"><span class="header-section-number">3</span> Equations</a></li>
+  <li><a href="#res" id="toc-res" class="nav-link" data-scroll-target="#res"><span class="header-section-number">4</span> Results</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5</span> References</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Enter main title here</h1>
+<p class="subtitle lead">Enter subtitle here</p>
+
+  Enter author here
+  , Enter author here
+  , Enter author here
+  , Enter author here
+
+<br>
+<img src="coverPicture.png" alt="Cover" image="" caption="" width="460" height="345">
+<br>
+<div class="abstract-title">Siteres som:</div>
+Brum, O., Robin, K. 2016. A very good title. NINA Report 1234. Norwegian Institute for Nature Research. <a href="http://hdl.handle.net/11250/available from library">http://hdl.handle.net/11250/available from library</a>
+<br>
+<br>
+Quality reviewers: xx
+<br>
+Responsible signature: Research Manager [to be filled in by the research director] (sign.)
+<br>
+<div class="abstract">
+<div class="abstract-title">Sammendrag</div>
+<p>Enter text here in Norwegian, a short summary of the content. The text in the summary is searchable in databases and online, and is important for the report to be captured by searches.<br>
+<br>
+Sections and empty rows between them are a bit tricky to create in the YAML section, but it can be done like this. Empty rows in the preface can also be created in the same way.</p>
+</div>
+
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+Enter text here, a short summary of the content. The text in the summary is searchable in databases and online, and is important for the report to be captured in searches.
+</div>
+
+
+
+<!-- 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    Enter text here, a short summary of the content. The text in the summary is searchable in databases and online, and is important for the report to be captured in searches.
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>ett, två</p>
+  </div>
+</div>
+ -->
+
+</div></header>
+
+
+<section id="sec-inl" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This is a Quarto template for NINA Reports, a further development of the Rmarkdown template from <code>NinaR</code> <span class="citation" data-cites="NinaR">(<a href="#ref-NinaR" role="doc-biblioref">Åström 2016</a>)</span>. It is primarily intended for use in the statistical program R, for example via https://rstudio.nina.no. Quarto will eventually replace Rmarkdown in Rstudio, and has the advantage of working not only for R, but also for other languages, such as python.</p>
+<p>The writing style of producing a NINA report from a script is used to advantage when the report has a large amount of code, or when you want to create a reproducible report. Apart from the sections with code, the template is intended to mimic NINA’s standard template for reports. To collaborate with colleagues who are not familiar with Git or code in general, you can, for example, use <code>trackdown</code>. With this package, the main author can share an updated text version of the document on google drive, where co-authors can edit the text. The changes in the text can then be pushed down to the Quarto document. See more at https://cran.r-project.org/web/packages/trackdown/vignettes/trackdown-workflow.html</p>
+</section>
+<section id="procedure" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Procedure</h1>
+<p><em>This is required to use the template:</em> * Rstudio (if you are going to use R) * A Tex installation (if you are using pdf output) - For Windows, see http://miktex.org/ - For Mac, see http://tug.org/mactex/ - For Linux, installere tex-live * NinaR, to make it easier to use e.g.&nbsp;NINA colors (see http://www.github.com/NINAnor/NinaR)</p>
+<p>The easiest way is to use the rstudio servers http://rstudio.nina.no, where everything is (should be) installed.</p>
+<p>Use the template e.g.&nbsp;in rstudio.nina.no by typing this in the terminal window: <code>quarto use template NINAnor/quarto_nina_report</code>. This will create a subfolder with the files you want to work with. At the moment, quarto templates are not available via Rstudio’s menus, but this will probably be improved in the future.</p>
+<p>At the top of the template (not shown in the PDF) there is a so-called “YAML section” where various mandatory things must be entered. A closed PDF can be created by writing “yes” after secure_pdf. Line numbers for review are produced through <code>line_numbering: yes</code>. The self-reference on page 3 is manually entered by <code>self-ref:</code> in the YAML section.</p>
+<p>Only the pdf output will create a report that is completely similar to a regular NINA report. A big advantage of using Quarto is that you can switch between different formats without changing templates, or changing formats for figure captions and references, etc. But note that the html and docx templates are under development and do not mimic a NINA report.</p>
+<p>Use only one output at a time, by commenting out the ones you do not use in the YAML section. There are many “options” in Quarto that are not shown here. Search online and try your hand at it.</p>
+<p>References can be included in two ways. For example, we can refer to <span class="citation" data-cites="Pedersen2016">Pedersen et al. (<a href="#ref-Pedersen2016" role="doc-biblioref">2016</a>)</span> in the text, or like this <span class="citation" data-cites="Pedersen2016">(<a href="#ref-Pedersen2016" role="doc-biblioref">Pedersen et al. 2016</a>)</span>. The style of the references depends on whether they are classified as the correct type, for example as an article <span class="citation" data-cites="article">(<a href="#ref-article" role="doc-biblioref">Adams 1993</a>)</span>.</p>
+<section id="test-sub-sub-heading" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="test-sub-sub-heading"><span class="header-section-number">2.1</span> Test sub sub heading</h2>
+<p>To create a “pagebreak”, for example between different chapters, type <code>\newpage</code>. <code>\clearpage</code> works in a similar way, but then you force a placement of all images up to now, and then they can often end up on their own page. Try it out.</p>
+</section>
+<section id="one-for-sub-sub-heading" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="one-for-sub-sub-heading"><span class="header-section-number">2.2</span> One for sub sub heading</h2>
+<p>This template is still not perfect, but has been used for a project for the Norwegian Environment Agency and approved by the library. Questions and opinions can be sent to Jens Åström.</p>
+<p>It can be faster to write reports in this format, but there are often some minor formatting fixes at the end. The placement of images can be controlled to some extent by changing their size (e.g.&nbsp;out.width or fig.width), or by overriding the position (e.g.&nbsp;fig.pos = “!hb”). But not everything can be controlled completely, so for now you have to accept some placements.</p>
+<section id="en-sub-sub-sub-heding" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="en-sub-sub-sub-heding"><span class="header-section-number">2.2.1</span> En sub sub sub heding</h3>
+<p>This is the lowest level of headers you should use.</p>
+<section id="a-level-4-header" class="level4" data-number="2.2.1.1">
+<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="a-level-4-header"><span class="header-section-number">2.2.1.1</span> A level 4 header</h4>
+<p>This is not actually used in the NINA template.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="equations" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Equations</h1>
+<p>Equations can be written using LaTeX code.</p>
+<p><span class="math display">\[\tilde f(\omega)=\frac{1}{2\pi}
+\int_{-\infty}^\infty f(x)e^{-i\omega x}\,dx\,,\]</span></p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="res" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Results</h1>
+<p>R code can be added as usual. The color scheme can be changed through the <code>highlight: xxx</code> Yaml section at the start of the document.</p>
+<div class="cell" data-layout-align="left">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Slik vises kode-kommentarer</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="sc">*</span> <span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Quarto is so-called “coding language-agnostic” and other programming languages ​​can be used. For example Bash:</p>
+<div class="cell" data-layout-align="left">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="kw">((</span> <span class="va">n</span><span class="op">=</span><span class="dv">1</span><span class="kw">;</span> <span class="va">n</span><span class="op">&lt;=</span><span class="dv">5</span><span class="kw">;</span> <span class="va">n</span><span class="op">++</span> <span class="kw">))</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Rad </span><span class="va">$n</span><span class="st">"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rad 1
+Rad 2
+Rad 3
+Rad 4
+Rad 5</code></pre>
+</div>
+</div>
+<p>Or Python, like this script to find prime numbers:</p>
+<div class="cell" data-layout-align="left">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lower <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>upper <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(lower, upper <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">1</span>:</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, num):</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span> (num <span class="op">%</span> i) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>               <span class="cf">break</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>       <span class="cf">else</span>:</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>           <span class="bu">print</span>(num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2
+3</code></pre>
+</div>
+</div>
+<p>Tables from R can be created through the <code>xtable</code>, <code>kable</code> or <code>DT::datatable</code> packages, depending on the output format. Here is an example of a table with model estimates from a simple model. We use quarto variables to switch between table formats, depending on which output format we are rendering. This is not needed if you are only going to create a format. You can also refer to a table, for example I am now referring to <a href="#tbl-table1" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div id="tbl-table1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="left">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Eksempeltabell
+</figcaption>
+<div aria-describedby="tbl-table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mod1<span class="ot">&lt;-</span><span class="fu">glm</span>(y<span class="sc">~</span>x)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>to_table <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">summary</span>(mod1)<span class="sc">$</span>coefficients, <span class="dv">3</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">names</span>(rmarkdown<span class="sc">::</span>metadata<span class="sc">$</span>format) <span class="sc">==</span> <span class="st">"ninareport-pdf"</span>){</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a> <span class="fu">xtable</span>(to_table,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption=</span><span class="st">"Tabell laget med xtable."</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>(<span class="fu">names</span>(rmarkdown<span class="sc">::</span>metadata<span class="sc">$</span>format) <span class="sc">==</span> <span class="st">"ninareport-html"</span>){</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">datatable</span>(to_table, </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                <span class="at">caption=</span><span class="st">"Tabell laget med xtable."</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                <span class="at">style =</span> <span class="st">"bootstrap"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                <span class="at">options =</span> <span class="fu">list</span>(</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                  <span class="at">pageLength =</span> <span class="dv">10</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                  <span class="at">autoWidth =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                  <span class="at">columnDefs =</span> <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">width =</span> <span class="st">"100px"</span>,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">targets =</span> <span class="dv">1</span>))</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>(to_table,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption=</span><span class="st">"Tabell laget med xtable."</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-bec75f69d6eaa914f388" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-bec75f69d6eaa914f388">{"x":{"style":"bootstrap","filter":"none","vertical":false,"caption":"<caption>Tabell laget med xtable.<\/caption>","data":[["(Intercept)","x"],[1.563,0.898],[1.262,0.25],[1.238,3.596],[0.251,0.007]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Estimate<\/th>\n      <th>Std. Error<\/th>\n      <th>t value<\/th>\n      <th>Pr(&gt;|t|)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"columnDefs":[{"width":"100px","targets":1},{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Estimate","targets":1},{"name":"Std. Error","targets":2},{"name":"t value","targets":3},{"name":"Pr(>|t|)","targets":4}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</figure>
+</div>
+<p>Figures work in the usual way. Figure text and “label” that can be referenced are written as quarto comments in the code block. <a href="#fig-barplot" class="quarto-xref">Figure&nbsp;1</a> shows an example of using NINA’s logo colors via the function <code>NinaR::NinaPalette</code>.</p>
+<div class="cell" data-layout-align="left">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plot.mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">25</span>, <span class="dv">40</span>, <span class="at">sd=</span><span class="dv">10</span>), <span class="at">ncol=</span><span class="dv">5</span>, <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"Sportsfisker"</span>, <span class="st">"Elveeier"</span>, <span class="st">"Oppleid"</span>, <span class="st">"Fisket"</span>, <span class="st">"Poseidon"</span>), <span class="fu">c</span>(<span class="st">"Lakselus"</span>, <span class="st">"Utsetting"</span>, <span class="st">" Strengere restriksjoner"</span>, <span class="st">"Fysiske tiltak"</span>, <span class="st">"Flaks"</span>)))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plot.mat <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">Verdi =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">25</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">mean =</span> <span class="dv">40</span>, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">sd =</span> <span class="dv">10</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                   Prøvetyper <span class="ot">=</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Type_1"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"Type_2"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"Type_3"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"Type_4"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">"Type_5"</span>),</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">each =</span> <span class="dv">5</span>),</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                   <span class="at">Kategori =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Lengde"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Høyde"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Dybde"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Vekt"</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Kvalitet"</span>),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">times =</span> <span class="dv">5</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot.mat) <span class="sc">+</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> Verdi, <span class="at">y =</span> Prøvetyper, <span class="at">fill =</span> Kategori),</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>           <span class="at">stat =</span> <span class="st">"identity"</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> <span class="st">'dodge'</span>) <span class="sc">+</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_nina</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-barplot" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" data-fig-pos="h!">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="quarto_ninareport_englishVersion_files/figure-html/fig-barplot-1.svg" class="img-fluid quarto-figure quarto-figure-left figure-img" data-fig-pos="h!">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Ett exempel med NINAs fargepalett generert fra R.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Existing images can also be added through regular markdown syntax. These will be centered. Note that eps files are specified without a file extension.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="logo.png" width="400" height="200" class="figure-img"></p>
+<figcaption>Nina-logoen, som eksempel på inkludering av et bilde. </figcaption>
+</figure>
+</div>
+<p>If you need more options for defining the size and placement of a finished image, you can also include it with “include_graphics”.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-logo_stor" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logo_stor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="logo.png" class="quarto-figure quarto-figure-left figure-img" style="width:10cm;height:5cm">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logo_stor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: NINA-logoen via (knitr::include_graphics) med spesifisert format.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We can also refer to images, for example <a href="#fig-logo_stor" class="quarto-xref">Figure&nbsp;2</a>, which are included in the template. Sections can be referenced by specifying a reference in the heading <code>{#section}</code>. For example, I am now referencing the introduction in <a href="#sec-inl" class="quarto-xref">Chapter&nbsp;1</a>.</p>
+</section>
+<section id="references" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> References</h1>
+<p></p>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-article" class="csl-entry" role="listitem">
+Adams, P. 1993. The title of the work. The name of the journal <strong>4</strong>(2): 201–213.
+</div>
+<div id="ref-NinaR" class="csl-entry" role="listitem">
+Åström, J. 2016. NinaR: Document templates and functions for NINA. <a href="http://github.com/NINAnor/NinaR">http://github.com/NINAnor/NinaR</a>.
+</div>
+<div id="ref-Pedersen2016" class="csl-entry" role="listitem">
+Pedersen, H.C., Follestad, A., Gjershaug, J.O., and Nilsen, E.B. 2016. <a href="http://www.nina.no/archive/nina/PppBasePdf/rapport/2016/1178.pdf">Statusoversikt for jaktbart småvilt</a>. NINA rapport 1178. Norsk institutt for naturforskning.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -11,12 +11,12 @@ contributes:
       template: pdf_english_template/template.tex
       number-sections: true
     html:
-      theme: html_template/ninareport.scss
+      theme: html_english_template/ninareport.scss
       template-partials:
-        - html_template/title-block.html
+        - html_english_template/title-block.html
       include-in-header: 
-        - html_template/back-to-top.html
-        - html_template/progressbar.html
+        - html_english_template/back-to-top.html
+        - html_english_template/progressbar.html
     docx:
       reference_doc: docx_template/nina_report_quarto.docx
       
